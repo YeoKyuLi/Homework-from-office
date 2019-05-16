@@ -11,6 +11,9 @@
 #include <algorithm>
 
 using namespace std;
+// static 사용하지 않기
+// operator 사용해서 reverse하기
+// operator에 람다 넣어보기
 
 struct Data{
     int x,y;
