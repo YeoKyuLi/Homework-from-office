@@ -14,7 +14,8 @@ using namespace std;
 // static 사용하지 않기
 // operator 사용해서 reverse하기
 // operator에 람다 넣어보기
-
+// functor
+// 람다
 struct Data{
     int x,y;
     int sortC;
@@ -27,6 +28,8 @@ struct Data{
 bool decrease(int a, int b){
     return a > b;
 }
+
+
 
 int main()
 {
