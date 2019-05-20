@@ -16,6 +16,20 @@ using namespace std;
 // operator에 람다 넣어보기
 // functor
 // 람다
+/*
+람다의 사용법은 간단하다. 
+
+- []{} 
+- [](인자){}
+
+람다 소개자 : [] (Lambda Introducer)
+
+파라미터 지정자 : () (Parameter Specifier)
+
+람다 몸체 : {} (Lambda Body)
+
+출처: https://vallista.tistory.com/entry/C-11-Lambda-Expression-람다-표현식-함수-객체-Functor [VallistA]
+*/
 struct Data{
     int x,y;
 //    bool operator<(const Data& rhs)const{
@@ -29,8 +43,14 @@ public :
 
 //    bool by_x(const Data& rhs)const{ return (x<rhs.x); };
 //    bool by_y(const Data& rhs)const{ return (y<rhs.y); };
-    
+    Data operator<(const Data& rhs);
+
+
 };
+Data Data::operator<(const Data& rhs){
+        // cout << (x < rhs.x) << " " << (y < rhs.y) << endl;
+        return (x < rhs.x) && (y < rhs.y);
+}
 
 
 bool sortbysecdesc(const pair<int,int> &a,
