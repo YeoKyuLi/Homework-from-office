@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8E1C3F7A228D7F04005E3738 /* vectorSort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8E1C3F79228D7F04005E3738 /* vectorSort.cpp */; };
+		8E41F9D722943F2100202D7D /* map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8E41F9D622943F2100202D7D /* map.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		8E1C3F79228D7F04005E3738 /* vectorSort.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vectorSort.cpp; sourceTree = "<group>"; };
+		8E41F9D622943F2100202D7D /* map.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = map.cpp; sourceTree = "<group>"; };
 		8E592B01228AF66200BC8817 /* Homework-from-office */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Homework-from-office"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -58,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				8E1C3F79228D7F04005E3738 /* vectorSort.cpp */,
+				8E41F9D622943F2100202D7D /* map.cpp */,
 			);
 			path = "Homework-from-office";
 			sourceTree = "<group>";
@@ -119,7 +121,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E1C3F7A228D7F04005E3738 /* vectorSort.cpp in Sources */,
+				8E41F9D722943F2100202D7D /* map.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
