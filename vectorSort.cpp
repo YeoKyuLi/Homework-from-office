@@ -40,14 +40,14 @@ public:
     //     // cout << (x < rhs.x) << " " << (y < rhs.y) << endl;
     //     return Data(x < rhs.x, y < rhs.y);
     // }
-    bool operator<(const Data& rhs)const{
-        // cout << (x < rhs.x) << " " << (y < rhs.y) << endl;
-        return (x < rhs.x) && (y < rhs.y);
-    }
+    Data operator<(const Data& rhs);
 
 
 };
-
+Data Data::operator<(const Data& rhs){
+        // cout << (x < rhs.x) << " " << (y < rhs.y) << endl;
+        return (x < rhs.x) && (y < rhs.y);
+    }
 bool decrease(int a, int b){
     return a > b;
 }
@@ -71,9 +71,9 @@ int main()
     // cout << endl;
     
     sort(structD.begin(), structD.end());
-    for(int x = 0 ; x < structD.size(); x++)
-        cout << "{ " << structD[x].x << ", " << structD[x].y << " }" << " ";
-    cout << endl;
+    // for(int x = 0 ; x < structD.size(); x++)
+    //     cout << "{ " << structD[x].x << ", " << structD[x].y << " }" << " ";
+    // cout << endl;
  
     
     // sort(structD.begin(), structD.end(), [](const Data& lhs, const Data& rhs) {
