@@ -35,9 +35,7 @@ using namespace std;
 */
 struct Data{
     int x,y;
-//    bool operator<(const Data& rhs)const{
-//        return (x < rhs.x);
-//    }
+
 public :
     // Data(int a=0, int b=0): x(a), y(b) {}
     bool operator<(const Data& rhs)const{
@@ -56,7 +54,6 @@ public :
 //         return (x < rhs.x) && (y < rhs.y);
 // }
 
-
 bool sortbysecdesc(const pair<int,int> &a,
                    const pair<int,int> &b)
 {
@@ -64,17 +61,13 @@ bool sortbysecdesc(const pair<int,int> &a,
 }
 struct SortByDecrease{
     int x;
-    //    bool operator<(const Data& rhs)const{
-    //        return (x < rhs.x);
-    //    }
+
     public :
     SortByDecrease(): x(0) {}
     SortByDecrease(int a=0): x(a) {}
     bool operator<(const SortByDecrease& rhs)const{
         return x > rhs.x ;
     }
-    //    bool by_x(const Data& rhs)const{ return (x<rhs.x); };
-    //    bool by_y(const Data& rhs)const{ return (y<rhs.y); };
     
 };
 bool decrease(int a, int b){
