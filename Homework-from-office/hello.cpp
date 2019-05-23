@@ -3,10 +3,12 @@
 using namespace std;
 // 똑같은 함수 짜기
 struct D{
-    int a;
 
-    void operator() ()  {
+    void operator()()  {
         cout << "Hello World" << endl;
+    }
+    void operator()(int num)  {
+        cout << "Hello " << num << endl;
     }
 };
 
@@ -17,6 +19,6 @@ void hello(int a){
 int main()
 {
     D d;
-    d();
+    d(10);
     return 0;
 }
