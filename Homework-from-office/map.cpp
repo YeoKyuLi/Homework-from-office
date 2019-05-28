@@ -17,41 +17,58 @@
 
 #include <iostream>
 #include <map>
+#include <tuple>
 using namespace std;
-//class Keys {
-//public:
-//    Keys(int k1, int k2) : key1(k1), key2(k2) { }
-////    bool operator<(const Keys &right) const {
-////        return (key1 < right.key1 && key2 < right.key2);
-////    }
-//    int key1;
-//    int key2;
-//};
+class Keys {
+public:
+    Keys(int k1, int k2) : key1(k1), key2(k2) { }
+//    bool operator<(const Keys &right) const {
+//        return (key1 < right.key1 && key2 < right.key2);
+//    }
+    int key1;
+    int key2;
+};
 // https://www.techiedelight.com/use-std-pair-key-std-map-cpp/
-typedef pair<int, int> keys;
+// https://m.blog.naver.com/PostView.nhn?blogId=lsm_origin&logNo=220079240439&proxyReferer=https%3A%2F%2Fwww.google.com%2F
+//typedef pair<int, int> keys;
 int main()
 {
-    map<keys, string>::iterator it;
-    map<keys, string> myMap = {
-        {make_pair(28, 165), "여규리"},
-        {make_pair(28, 170), "김아라"},
-        {make_pair(28, 180), "이동훈"},
+    map<Keys, string>::iterator it;
+    map<Keys, string> myMap = {
+        {make_tuple(28, 165), "여규리"},
+        {make_tuple(28, 170), "김아라"},
+        {make_tuple(28, 180), "이동훈"},
     };
     
-    for(const auto &entry : myMap){
-        auto key_pair = entry.first;
-        cout << "{" << key_pair.first << ", " << key_pair.second << "} / " << entry.second << "\n";
-    }
     it = myMap.find(keys(28, 165));
     if(it != myMap.end())
         myMap.erase(it);
     
-    cout << endl;
     for(const auto &entry : myMap){
         auto key_pair = entry.first;
         cout << "{" << key_pair.first << ", " << key_pair.second << "} / " << entry.second << "\n";
     }
-    cout << it->second;
+    
+//    map<keys, string>::iterator it;
+//    map<keys, string> myMap = {
+//        {make_pair(28, 165), "여규리"},
+//        {make_pair(28, 170), "김아라"},
+//        {make_pair(28, 180), "이동훈"},
+//    };
+//    for(const auto &entry : myMap){
+//        auto key_pair = entry.first;
+//        cout << "{" << key_pair.first << ", " << key_pair.second << "} / " << entry.second << "\n";
+//    }
+//    it = myMap.find(keys(28, 165));
+//    if(it != myMap.end())
+//        myMap.erase(it);
+//
+//    cout << endl;
+//    for(const auto &entry : myMap){
+//        auto key_pair = entry.first;
+//        cout << "{" << key_pair.first << ", " << key_pair.second << "} / " << entry.second << "\n";
+//    }
+//    cout << it->second;
     
     return 0;
 }
