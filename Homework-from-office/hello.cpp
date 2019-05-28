@@ -13,12 +13,13 @@ struct D{
 };
 
 void hello(int a){
-    cout << "hello" << a << endl;
+    cout << "hello " << a << endl;
 }
 
 int main()
 {
     D d;
     d(10);
+    hello(10);
     return 0;
 }
