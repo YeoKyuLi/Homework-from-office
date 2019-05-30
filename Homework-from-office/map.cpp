@@ -34,20 +34,16 @@ public:
 int main()
 {
     map<Keys, string>::iterator it;
-    map<Keys, string> myMap = {
-        {make_tuple(28, 165), "여규리"},
-        {make_tuple(28, 170), "김아라"},
-        {make_tuple(28, 180), "이동훈"},
-    };
+    map<Keys, string> myMap;
     
-    it = myMap.find(keys(28, 165));
-    if(it != myMap.end())
-        myMap.erase(it);
-    
-    for(const auto &entry : myMap){
-        auto key_pair = entry.first;
-        cout << "{" << key_pair.first << ", " << key_pair.second << "} / " << entry.second << "\n";
-    }
+//    it = myMap.find(keys(28, 165));
+//    if(it != myMap.end())
+//        myMap.erase(it);
+//
+//    for(const auto &entry : myMap){
+//        auto key_pair = entry.first;
+//        cout << "{" << key_pair.first << ", " << key_pair.second << "} / " << entry.second << "\n";
+//    }
     
 //    map<keys, string>::iterator it;
 //    map<keys, string> myMap = {
