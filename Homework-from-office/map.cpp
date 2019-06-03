@@ -8,11 +8,8 @@
 // Map :: "나이", "키"를 넣었을때 사람이름 나오도록
 // pair 사용안하기
 //  char name[100];  <- key .. Data  <- value;
-// static 사용하지 않기
-// operator 사용해서 reverse하기
-// operator에 람다 넣어보기
-// functor
-// 람다
+// 1. Map에 class Key 적용하기
+// https://stackoverflow.com/questions/2282349/specialization-of-templateclass-tp-struct-stdless-in-different-namespace
 // operator less
 
 #include <iostream>
